@@ -5,7 +5,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * @Author: yushibo
  * @Date: 2019/5/27 15:46
- * @Description:
+ * @Description: 休眠工具类
  */
 public class SleepTools {
 
