@@ -34,8 +34,15 @@ public class SumArray {
                     count = count +src[i];
                 }
                 return count;
+            }else{
+                int mid = (fromIndex+toIndex)/2;
+                SumTask left = new SumTask(src,fromIndex,mid);
+                SumTask right = new SumTask(src,mid+1,toIndex);
+                invokeAll(left,right);
+                return left.join()+right.join();
+
+
             }
-            return null;
         }
     }
 
@@ -46,5 +53,10 @@ public class SumArray {
         SumTask innerFind = new SumTask(src,0,src.length);
         long start = System.currentTimeMillis();
 
+        pool.invoke(innerFind);
+        System.out.println("Task is running...");
+
+        System.out.println("The is running "+ innerFind.join()
+        +"spend time :" + (System.currentTimeMillis()-start)+ "ms");
         }
 }
