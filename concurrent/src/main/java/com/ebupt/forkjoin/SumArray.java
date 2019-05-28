@@ -38,7 +38,9 @@ public class SumArray {
                 int mid = (fromIndex+toIndex)/2;
                 SumTask left = new SumTask(src,fromIndex,mid);
                 SumTask right = new SumTask(src,mid+1,toIndex);
+                //递归处理所有拆分后的任务
                 invokeAll(left,right);
+                //获取拆分后任务的返回值
                 return left.join()+right.join();
 
 
