@@ -3,7 +3,7 @@ package com.ebupt.safeend;
 /**
  * @Author: yushibo
  * @Date: 2019/5/27 13:04
- * @Description: 如何安全的中断线程
+ * @Description: 守护线程
  */
 public class EndThread {
 

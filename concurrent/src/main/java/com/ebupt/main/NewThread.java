@@ -7,7 +7,7 @@ import java.util.concurrent.FutureTask;
 /**
  * @Author: yushibo
  * @Date: 2019/5/27 11:28
- * @Description:
+ * @Description: 线程的三种方法 无参Runnable 有参数Callable
  */
 public class NewThread {
 

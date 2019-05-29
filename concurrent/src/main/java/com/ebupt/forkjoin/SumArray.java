@@ -8,7 +8,7 @@ import java.util.concurrent.RecursiveTask;
 /**
  * @Author: yushibo
  * @Date: 2019/5/28 17:16
- * @Description:
+ * @Description: 同步多线程计算数组和
  */
 public class SumArray {
 
@@ -56,6 +56,7 @@ public class SumArray {
         long start = System.currentTimeMillis();
 
         pool.invoke(innerFind);
+        //主线程阻塞 等待invoke完事之后主线程才会继续放下走（同步用法）
         System.out.println("Task is running...");
 
         System.out.println("The is running "+ innerFind.join()

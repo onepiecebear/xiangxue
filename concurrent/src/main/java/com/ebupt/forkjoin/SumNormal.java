@@ -7,7 +7,7 @@ import javax.naming.ldap.SortResponseControl;
 /**
  * @Author: yushibo
  * @Date: 2019/5/28 17:16
- * @Description:
+ * @Description: 单线程计算数组和
  */
 public class SumNormal {
 

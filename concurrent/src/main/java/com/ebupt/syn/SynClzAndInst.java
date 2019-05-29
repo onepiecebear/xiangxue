@@ -5,7 +5,7 @@ import com.ebupt.tools.SleepTools;
 /**
  * @Author: yushibo
  * @Date: 2019/5/27 15:27
- * @Description:
+ * @Description: 对象锁和类锁
  */
 public class SynClzAndInst {
 
