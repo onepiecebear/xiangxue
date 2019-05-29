@@ -30,7 +30,7 @@ public class DBPoolSemaphore {
     }
 
     //归还连接
-    public void returnConnect(Connection connection) throws InterruptedException {
+    public  void returnConnect(Connection connection) throws InterruptedException {
         if(connection != null){
             //等待获取许可的线程数
             System.out.println("当前有"+useful.getQueueLength()+"个线程等待数据库连接");
