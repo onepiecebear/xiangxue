@@ -31,11 +31,12 @@ public class UseAtomicStampedReference {
         Thread errorStampThread = new Thread(new Runnable() {
             @Override
             public void run() {
-                String ref = asr.getReference();
+                String reference = asr.getReference();
                 System.out.println(Thread.currentThread().getName()+
-                        "当前变量值"+oldReference+"当前版本戳"+oldStamp+
+                        "当前变量值"+reference+"当前版本戳"+asr.getStamp()+"-"+
                         //(期望值，新值，期望版本号，新的版本号)
-                        asr.compareAndSet(oldReference,oldReference+"C",oldStamp,oldStamp+1));
+                        //Stamp不同步跟新失败
+                        asr.compareAndSet(reference,reference+"C",oldStamp,oldStamp+1));
             }
         });
 
