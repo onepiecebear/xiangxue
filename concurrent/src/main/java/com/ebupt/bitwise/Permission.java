@@ -27,10 +27,16 @@ public class Permission {
     }
     //删除用户权限
     public void disable(int per){
+        //15为 1111 & ~ （8 | 2）
+        //（8 | 2） 1000 | 0010  = 1010
+        // ~1010 = 0101
+        //1111 & 0101 = 0101
         flag=  flag & ~per;
     }
     //判断用户的权限
     public boolean isAllow(int per){
+        //15 & 8
+        //0111 & 1000 = 1000
         return (flag & per) == per;
     }
     //判断用户没有的权限
