@@ -56,6 +56,7 @@ public class MyThreadPool {
             workeThreads[i] = null;
         }
         tackeQueue.clear();//清空任务队列
+
     }
 
 
