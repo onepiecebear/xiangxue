@@ -16,7 +16,7 @@ public class TrasnferAccount implements ITransfer {
             Thread.sleep(100);
 
             synchronized (to){//在锁转入
-                System.out.println(Thread.currentThread().getName()+ " get"+from.getName());
+                System.out.println(Thread.currentThread().getName()+ " get"+to.getName());
                 from.flyMoney(amount);
                 to.addMoney(amount);
 

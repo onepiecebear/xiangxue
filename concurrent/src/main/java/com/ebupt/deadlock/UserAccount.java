@@ -12,7 +12,13 @@ public class UserAccount {
     private String name;
     private int money;
 
-//private final Lock lock = new ReentrantLock();
+    //显示锁
+    private final Lock lock = new ReentrantLock();
+
+    public Lock getLock(){
+        return lock;
+    }
+
 
     public UserAccount(String name, int money) {
         this.name = name;
