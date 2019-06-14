@@ -9,11 +9,11 @@ import java.util.concurrent.TimeUnit;
  * @Description: 存放到队列的元素
  * Delayed 使用的定时单位为纳秒
  */
-public class ItemVo<T> implements Delayed{
+public class  ItemVo<T> implements Delayed{
 
     private long avtiveTime;//到期时间，单位毫秒
     private T data;
-//avtiveTime是个过期时长
+    //avtiveTime是个过期时长
     public ItemVo(long avtiveTime, T data) {
         //将传入的时长转换为超时的时刻
         this.avtiveTime = TimeUnit.NANOSECONDS.convert
