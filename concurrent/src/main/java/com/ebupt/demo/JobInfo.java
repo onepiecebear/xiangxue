@@ -58,7 +58,7 @@ public class JobInfo<R> {
 
 
     public String getTotalProcess() {
-        return "success{"+successCount.get()+"}/current{"+taskProcesserCount.get()+"}" +
+        return "success{"+getSuccessCount()+"}---success{"+getFailCount()+"}---current{"+getTaskProcesserCount()+"}" +
                 " Total{"+jobLength+"}";
     }
 

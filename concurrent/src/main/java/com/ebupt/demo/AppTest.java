@@ -13,7 +13,7 @@ import java.util.Random;
 public class AppTest {
 
     private final static String JOB_NAME = "计算数值";
-    private final static int JOB_LENGTH = 1000;
+    private final static int JOB_LENGTH = 100;
 
 
     //查询任务进度的线程
@@ -28,7 +28,7 @@ public class AppTest {
         @Override
         public void run() {
             int i = 0;//查询次数
-            while (i<350){
+            while (i<10){
                 List<TaskResult<String>> taskDetail = pool.getTaskDetail(JOB_NAME);
                 if(!taskDetail.isEmpty()){
                     System.out.println(pool.getTaskProgess(JOB_NAME));
